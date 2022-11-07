@@ -9,9 +9,7 @@ public class PasswordRetrievalPage {
 
     private WebDriver driver;
 
-    public PasswordRetrievalPage(WebDriver driver) {
-        this.driver = driver;
-    }
+    private Header header;
 
     private By passwordRetrievalLabel = By.xpath(".//h2[text()='Восстановление пароля']");
 
@@ -22,4 +20,9 @@ public class PasswordRetrievalPage {
     private By rememberPasswordLabel = By.xpath(".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']");
 
     private By signInLink = By.xpath(".//a[text()='Войти']");
+
+    public PasswordRetrievalPage(WebDriver driver) {
+        this.driver = driver;
+        header = new Header(driver);
+    }
 }

@@ -8,6 +8,8 @@ public class ConstructorPage {
 
     private WebDriver driver;
 
+    private Header header;
+
     private By assembleBurgerLabel = By.className("text text_type_main-large mb-5 mt-10");
 
     private By bunsTab = By.xpath(".//span[text()='Булки']");
@@ -32,6 +34,7 @@ public class ConstructorPage {
 
     public ConstructorPage(WebDriver driver) {
         this.driver = driver;
+        header = new Header(driver);
     }
 
     public void clickBunsTab() {

@@ -17,6 +17,10 @@ public class Header {
 
     private int profileLinkIndex = 2;
 
+    public Header(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void clickConstructorButton() {
         driver.findElements(headerLinks).get(constructorButtonIndex).click();
     }

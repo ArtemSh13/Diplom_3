@@ -9,6 +9,8 @@ public class ProfilePage {
 
     private WebDriver driver;
 
+    private Header header;
+
     private By profileLink = By.xpath(".//a[@class='Account_link__2ETsJ text text_type_main-medium text_color_inactive Account_link_active__2opc9']");
 
     private By profileFields = By.xpath(".//a[@class='text input__textfield text_type_main-default input__textfield-disabled']");
@@ -40,6 +42,7 @@ public class ProfilePage {
 
     public ProfilePage(WebDriver driver) {
         this.driver = driver;
+        header = new Header(driver);
     }
 
     public void profileLinkClick() {

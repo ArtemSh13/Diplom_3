@@ -8,6 +8,8 @@ public class SignUpPage {
 
     private WebDriver driver;
 
+    private Header header;
+
     private By registrationLabel = By.xpath(".//h2[text()='Регистрация']");
 
     private By registrationFields = By.xpath(".//input[@class='text input__textfield text_type_main-default']");
@@ -31,6 +33,7 @@ public class SignUpPage {
 
     public SignUpPage(WebDriver driver) {
         this.driver = driver;
+        header = new Header(driver);
     }
 
     public void enterName(String name) {

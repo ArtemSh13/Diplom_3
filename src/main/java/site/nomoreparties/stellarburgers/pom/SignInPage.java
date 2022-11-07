@@ -9,6 +9,8 @@ public class SignInPage {
 
     private WebDriver driver;
 
+    private Header header;
+
     private By signInLabel = By.xpath(".//h2[text()='Вход']");
 
     private By emailField = By.xpath(".//input[@class='text input__textfield text_type_main-default' and @type='text']");
@@ -29,6 +31,7 @@ public class SignInPage {
 
     public SignInPage(WebDriver driver) {
         this.driver = driver;
+        header = new Header(driver);
     }
 
     public void enterEmail(String email) {
