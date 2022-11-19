@@ -1,6 +1,7 @@
 package site.nomoreparties.stellarburgers.pom;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class SignUpPage {
@@ -57,11 +58,21 @@ public class SignUpPage {
     }
 
     public boolean isPasswordCorrect() {
-        return !(driver.findElement(incorrectPasswordLabel).isDisplayed());
+        try {
+            driver.findElement(incorrectPasswordLabel);
+            return false;
+        } catch (NoSuchElementException e) {
+            return true;
+        }
     }
 
     public boolean isUserAlreadySignedUp() {
-        return driver.findElement(userAlreadyExistsLabel).isDisplayed();
+        try {
+            driver.findElement(userAlreadyExistsLabel);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public void signUp(String name, String email, String password) {
