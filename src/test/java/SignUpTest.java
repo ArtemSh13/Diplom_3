@@ -14,15 +14,10 @@ import static org.junit.Assert.assertTrue;
 public class SignUpTest {
 
     private WebDriver driver;
-
     private SignUpPage signUpPage;
-
     private String name;
-
     private String email;
-
     private String password;
-
     private Random random;
 
     @Before
@@ -38,8 +33,15 @@ public class SignUpTest {
     }
 
     @Test
-    public void successfulRegistrationTest() {
-        password = "qWe-rTY-123";
+    public void failedRegistrationWithLess6PasswordTest() {
+        password = "qW-12";
+        signUpPage.signUp(name, email, password);
+        assertFalse("No message about invalid password", signUpPage.isPasswordCorrect());
+    }
+
+    @Test
+    public void successfulRegistrationWithEqual6PasswordTest() {
+        password = "qW-123";
         signUpPage.signUp(name, email, password);
         assertTrue("A valid password marked as invalid", signUpPage.isPasswordCorrect());
         assertFalse("Not registered user marked as registered", signUpPage.isUserAlreadySignedUp());
@@ -47,10 +49,12 @@ public class SignUpTest {
     }
 
     @Test
-    public void failedRegistrationWithInvalidPasswordTest() {
-        password = "1234";
+    public void successfulRegistrationWithGreater6PasswordTest() {
+        password = "qW-1234";
         signUpPage.signUp(name, email, password);
-        assertFalse("No message about invalid password", signUpPage.isPasswordCorrect());
+        assertTrue("A valid password marked as invalid", signUpPage.isPasswordCorrect());
+        assertFalse("Not registered user marked as registered", signUpPage.isUserAlreadySignedUp());
+        assertTrue("Sign In page isn't opened", driver.findElement(By.xpath(".//div[@class='Auth_login__3hAey']")).isDisplayed());
     }
 
     @After
