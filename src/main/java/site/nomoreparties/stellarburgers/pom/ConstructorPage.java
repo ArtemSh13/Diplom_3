@@ -10,7 +10,7 @@ public class ConstructorPage {
 
     private Header header;
 
-    private By assembleBurgerLabel = By.className("text text_type_main-large mb-5 mt-10");
+    private By assembleBurgerLabel = By.xpath(".//h1[text()='Соберите бургер']");
 
     private By bunsTab = By.xpath(".//span[text()='Булки']");
 
@@ -28,9 +28,9 @@ public class ConstructorPage {
 
     private By burgerConstructorArea = By.className("BurgerConstructor_basket__list__l9dp_");
 
-    private By totalLabel = By.className("text text_type_digits-medium mr-3");
+    private By totalLabel = By.xpath(".//p[@class='text text_type_digits-medium mr-3']");
 
-    private By signInOrOrderButton = By.className("button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg");
+    private By signInOrOrderButton = By.xpath(".//button[text()='Войти в аккаунт' or text()='Оформить заказ']");
 
     public ConstructorPage(WebDriver driver) {
         this.driver = driver;
