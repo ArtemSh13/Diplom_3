@@ -42,6 +42,12 @@ public class SignInPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
+    public void signUp(String email, String password) {
+        enterEmail(email);
+        enterPassword(password);
+        clickLoginButton();
+    }
+
     public void showPassword() {
         driver.findElement(showPasswordButton).click();
     }
