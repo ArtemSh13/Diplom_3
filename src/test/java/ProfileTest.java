@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import site.nomoreparties.stellarburgers.pom.ConstructorPage;
+import site.nomoreparties.stellarburgers.pom.ProfilePage;
 import site.nomoreparties.stellarburgers.pom.SignInPage;
 import site.nomoreparties.stellarburgers.pom.SignUpPage;
 
@@ -13,6 +14,7 @@ public class ProfileTest {
 
     private WebDriver driver;
     private SignUpPage signUpPage;
+    private SignInPage signInPage;
     private String name;
     private String email;
     private String password;
@@ -31,7 +33,7 @@ public class ProfileTest {
         System.out.println("Pseudorandom email is " + email);
         signUpPage.signUp(name, email, password);
         driver.get(SignInPage.LOG_IN_PAGE_URL);
-        SignInPage signInPage = new SignInPage(driver);
+        signInPage = new SignInPage(driver);
         signInPage.signIn(email, password);
     }
 
@@ -39,6 +41,13 @@ public class ProfileTest {
     public void goToProfileViaHeaderLink() {
         ConstructorPage constructorPage = new ConstructorPage(driver);
         constructorPage.header.clickProfileButton();
+    }
+
+    @Test
+    public void signOutViaSignOutLinkLink() {
+        signInPage.header.clickProfileButton();
+        ProfilePage profilePage = new ProfilePage(driver);
+        profilePage.signOutLinkClick();
     }
 
     @After
