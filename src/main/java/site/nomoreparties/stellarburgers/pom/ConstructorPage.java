@@ -1,7 +1,8 @@
 package site.nomoreparties.stellarburgers.pom;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ConstructorPage {
     public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
@@ -27,6 +28,8 @@ public class ConstructorPage {
     private By stuffingHeader = By.xpath(".//h2[text()='Начинки']");
 
     private By burgerConstructorArea = By.className("BurgerConstructor_basket__list__l9dp_");
+
+    private By ingredientsContainer = By.className("BurgerIngredients_ingredients__menuContainer__Xu3Mo");
 
     private By totalLabel = By.xpath(".//p[@class='text text_type_digits-medium mr-3']");
 
