@@ -8,7 +8,7 @@ public class ConstructorPage {
 
     private WebDriver driver;
 
-    private Header header;
+    public final Header header;
 
     private By assembleBurgerLabel = By.xpath(".//h1[text()='Соберите бургер']");
 
