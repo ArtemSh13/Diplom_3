@@ -9,7 +9,7 @@ public class SignUpPage {
 
     private WebDriver driver;
 
-    private Header header;
+    public final Header header;
 
     private By registrationLabel = By.xpath(".//h2[text()='Регистрация']");
 

@@ -9,7 +9,7 @@ public class ProfilePage {
 
     private WebDriver driver;
 
-    private Header header;
+    public final Header header;
 
     private By profileLink = By.xpath(".//a[@class='Account_link__2ETsJ text text_type_main-medium text_color_inactive Account_link_active__2opc9']");
 

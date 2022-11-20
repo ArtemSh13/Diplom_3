@@ -9,7 +9,7 @@ public class PasswordRetrievalPage {
 
     private WebDriver driver;
 
-    private Header header;
+    public final Header header;
 
     private By passwordRetrievalLabel = By.xpath(".//h2[text()='Восстановление пароля']");
 

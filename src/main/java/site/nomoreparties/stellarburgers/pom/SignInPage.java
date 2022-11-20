@@ -9,7 +9,7 @@ public class SignInPage {
 
     private WebDriver driver;
 
-    private Header header;
+    public final Header header;
 
     private By signInLabel = By.xpath(".//h2[text()='Вход']");
 
