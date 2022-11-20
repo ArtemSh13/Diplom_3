@@ -33,7 +33,7 @@ public class Header {
         driver.findElement(stellarBurgersLink).click();
     }
 
-    public void clickPersonalAreaLink() {
+    public void clickProfileButton() {
         driver.findElement(headerProfileButton).click();
     }
 }
