@@ -2,6 +2,8 @@ package site.nomoreparties.stellarburgers.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
 
@@ -28,15 +30,15 @@ public class ProfilePage {
 
     private int editButtonsPasswordEditButtonIndex = 2;
 
-    private By cancelLink = By.className("button_button__33qZ0 button_button_type_secondary__3-tsA button_button_size_medium__3zxIa");
+    private By cancelLink = By.xpath(".//button[text()='Отмена']");
 
-    private By saveButton = By.className("button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa");
+    private By saveButton = By.xpath(".//button[text()='Сохранить']");
 
-    private By ordersHistoryLink = By.className("Account_link__2ETsJ text text_type_main-medium text_color_inactive");
+    private By ordersHistoryLink = By.xpath(".//a[text()='История заказов']");
 
     private By ordersHistoryArea = By.xpath(".//a[@class='OrderHistory_link__1iNby']");
 
-    private By signOutLink = By.xpath(".//button[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']");
+    private By signOutButton = By.xpath(".//button[text()='Выход']");
 
     private By infoLabel = By.xpath(".//p[text()='В этом разделе вы можете изменить свои персональные данные']");
 
@@ -74,7 +76,9 @@ public class ProfilePage {
     }
 
     public void signOutLinkClick() {
-        driver.findElement(signOutLink).click();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.urlToBe(PROFILE_PAGE_URL));
+        driver.findElement(signOutButton).click();
     }
 
     public void enterNameField(String input) {
