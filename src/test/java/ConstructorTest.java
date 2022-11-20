@@ -52,6 +52,31 @@ public class ConstructorTest {
         signInPage.header.clickStellarBurgersLogo();
     }
 
+    // переход к разделу «Булки»
+    @Test
+    public void goToBunsTab() {
+        driver.get(ConstructorPage.MAIN_PAGE_URL);
+        ConstructorPage constructorPage = new ConstructorPage(driver);
+        constructorPage.clickStuffingTab();
+        constructorPage.clickBunsTab();
+    }
+
+    // переход к разделу «Соусы»
+    @Test
+    public void goToSaucesTab() {
+        driver.get(ConstructorPage.MAIN_PAGE_URL);
+        ConstructorPage constructorPage = new ConstructorPage(driver);
+        constructorPage.clickSaucesTab();
+    }
+
+    // переход к разделу «Начинки»
+    @Test
+    public void goToStuffingTab() {
+        driver.get(ConstructorPage.MAIN_PAGE_URL);
+        ConstructorPage constructorPage = new ConstructorPage(driver);
+        constructorPage.clickStuffingTab();
+    }
+
     @After
     public void teardown() {
         driver.quit();
