@@ -42,7 +42,7 @@ public class SignInPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
-    public void signUp(String email, String password) {
+    public void signIn(String email, String password) {
         enterEmail(email);
         enterPassword(password);
         clickLoginButton();
