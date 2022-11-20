@@ -19,7 +19,7 @@ public class SignInPage {
 
     private By showPasswordButton = By.xpath(".//div[@class='input__icon input__icon-action']");
 
-    private By signInButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    private By signInButton = By.xpath(".//button[text()='Войти']");
 
     private By newUserLabel = By.xpath(".//p[@class='undefined text text_type_main-default text_color_inactive mb-4']");
 
