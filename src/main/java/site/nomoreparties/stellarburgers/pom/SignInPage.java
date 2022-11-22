@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class SignInPage {
 
-    public static final String LOG_IN_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/login";
+    public static final String LOG_IN_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "login";
 
     private WebDriver driver;
 

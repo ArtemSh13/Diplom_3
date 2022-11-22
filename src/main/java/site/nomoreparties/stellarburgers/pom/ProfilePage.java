@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
 
-    public static final String PROFILE_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/account/profile";
+    public static final String PROFILE_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "account/profile";
 
     private WebDriver driver;
 

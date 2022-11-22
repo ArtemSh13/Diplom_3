@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ConstructorPage {
-    public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
+    public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/";
 
     private WebDriver driver;
 

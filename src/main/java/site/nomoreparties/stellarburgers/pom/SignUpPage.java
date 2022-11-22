@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class SignUpPage {
-    public final static String SIGN_UP_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/register";
+    public final static String SIGN_UP_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "register";
 
     private WebDriver driver;
 

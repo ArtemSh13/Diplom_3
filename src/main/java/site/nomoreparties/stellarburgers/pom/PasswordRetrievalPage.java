@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class PasswordRetrievalPage {
 
-    public final static String PASSWORD_RETRIEVAL_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "/forgot-password";
+    public final static String PASSWORD_RETRIEVAL_PAGE_URL = ConstructorPage.MAIN_PAGE_URL + "forgot-password";
 
     private WebDriver driver;
 
