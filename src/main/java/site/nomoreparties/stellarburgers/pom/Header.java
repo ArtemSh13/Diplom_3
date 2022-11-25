@@ -22,10 +22,6 @@ public class Header {
         driver.findElement(headerConstructorButton).click();
     }
 
-    public void clickOrdersFeedButton() {
-        driver.findElement(headerFeedButton).click();
-    }
-
     public void clickStellarBurgersLogo() {
         driver.findElement(stellarBurgersLink).click();
     }

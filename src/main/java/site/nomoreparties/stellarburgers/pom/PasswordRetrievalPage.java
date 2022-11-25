@@ -26,14 +26,6 @@ public class PasswordRetrievalPage {
         header = new Header(driver);
     }
 
-    public void enterEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
-    }
-
-    public void clickRetrieveButton() {
-        driver.findElement(retrieveButton).click();
-    }
-
     public void clickSignInLink() {
         driver.findElement(signInLink).click();
     }

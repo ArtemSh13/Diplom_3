@@ -48,19 +48,7 @@ public class SignInPage {
         clickLoginButton();
     }
 
-    public void showPassword() {
-        driver.findElement(showPasswordButton).click();
-    }
-
     public void clickLoginButton() {
         driver.findElement(signInButton).click();
-    }
-
-    public void clickSignUpLink() {
-        driver.findElement(signUpLink).click();
-    }
-
-    public void clickRetrievePasswordLink() {
-        driver.findElement(retrievePasswordLink).click();
     }
 }

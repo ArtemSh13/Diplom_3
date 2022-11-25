@@ -47,50 +47,9 @@ public class ProfilePage {
         header = new Header(driver);
     }
 
-    public void profileLinkClick() {
-        driver.findElement(profileLink).click();
-    }
-
-    public void editButtonsNameEditButtonIndexClick() {
-        driver.findElements(editButtons).get(editButtonsNameEditButtonIndex).click();
-    }
-
-    public void editButtonsEmailEditButtonIndexClick() {
-        driver.findElements(editButtons).get(editButtonsEmailEditButtonIndex).click();
-    }
-
-    public void editButtonsPasswordEditButtonIndexClick() {
-        driver.findElements(editButtons).get(editButtonsPasswordEditButtonIndex).click();
-    }
-
-    public void cancelLinkClick() {
-        driver.findElement(cancelLink).click();
-    }
-
-    public void saveButtonClick() {
-        driver.findElement(saveButton).click();
-    }
-
-    public void ordersHistoryLinkClick() {
-        driver.findElement(ordersHistoryLink).click();
-    }
-
     public void signOutLinkClick() {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.urlToBe(PROFILE_PAGE_URL));
         driver.findElement(signOutButton).click();
     }
-
-    public void enterNameField(String input) {
-        driver.findElements(profileFields).get(profileFieldsNameFieldIndex).sendKeys(input);
-    }
-
-    public void enterEmailField(String input) {
-        driver.findElements(profileFields).get(profileFieldsEmailFieldIndex).sendKeys(input);
-    }
-
-    public void enterPasswordField(String input) {
-        driver.findElements(profileFields).get(profileFieldsPasswordFieldIndex).sendKeys(input);
-    }
-
 }
